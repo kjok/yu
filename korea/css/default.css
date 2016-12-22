@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/* ------------------------
+     Font-size Adjustment
+---------------------------
+10px = 77%
+11px = 85%
+12px = 93%
+13px = 100%
+14px = 108%
+15px = 116%
+16px = 123.1%
+17px = 131%
+18px = 138.5%
+19px = 146.5%
+20px = 153.9%
+21px = 161.6%
+22px = 167%
+23px = 174%
+24px = 182%
+25px = 189%
+26px = 197%
+---------------------------*/
+
+
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+body{
+  font:82%/1.231 "Malgun Gothic","Yoon Gothic", 'Arial',"sans-serif";
+  /*font-family: 'Gulim' , 'Apple Gothic' , 'Arial' , sans-serif;*/
+  /*font:82%/1.231 'メイリオ', Meiryo,'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS P Gothic', Osaka,  sans-serif;*/
+  
+  /* for IE6/7 */
+	*font-size:small;
+	/* for IE Quirks Mode */
+	*font:x-small;
+}
+  
+select,
+input,
+button,
+textarea,
+button{
+  /*font:99% arial,helvetica,clean,sans-serif;*/
+  font:99% ;
+}
+
+table{
+  font-size:inherit;
+  font:100%
+  }
+
+pre,
+code,
+kbd,
+samp,
+tt{
+  font-family:monospace;
+  *font-size:108%;
+  line-height:100%;
+ }
+
+
+/*
+html5doctor.com Reset Stylesheet
+v1.4
+2009-07-27
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	/*border:0;
+	outline:0;*/
+	/*vertical-align:baseline;*/
+	background:transparent;
+}
+
+body {
+	/*line-height:1;*/
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	display:block;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	border:0;
+	/*vertical-align:baseline;*/
+	background:transparent;
+  overflow:hidden;
+}
+
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+img{
+  vertical-align:middle;
+  border:none;
+ }

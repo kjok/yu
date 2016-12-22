@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* ***********************************************************
+ *
+ * Since:     2010-06-25
+ * Editor:    kotabe
+ * Modified:   2010-06-25 by:kotabe
+ *
+ * ***********************************************************
+ */
+
+/* ----- import ----- */
+@import url("default.css");
+@import "common.css";
+@import "link.css";
+
