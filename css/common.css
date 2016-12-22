@@ -156,7 +156,7 @@ h2.pagetit {
     width: 100%;
     height: 161px;
     margin: 0px auto 10px;
-    background: #e2f4e8 url(/img/bgpagetitle.png) top right no-repeat;
+    background: #e2f4e8 url(../img/bgpagetitle.png) top right no-repeat;
     align-content: center;
     align-items: center;
     font-size: 1.8rem;
@@ -361,7 +361,7 @@ dl.sideNavi dd li:first-child {
 
 .main-footer {
     width: 100%;
-    background: #e0ffff url(/common/bg_footer.gif) left 30px no-repeat;
+    background: #e0ffff url(../common/bg_footer.gif) left 30px no-repeat;
     justify-content: space-around;
     padding-bottom: 70px;
 }
@@ -402,7 +402,7 @@ dl.sideNavi dd li:first-child {
 }
 
 #pjaxContent {
-    background: url(/img/bg_mainimg.jpg) center center no-repeat;
+    background: url(../img/bg_mainimg.jpg) center center no-repeat;
     animation: fadeInLoad 2s;
 }
 
@@ -502,7 +502,7 @@ dl.sideNavi dd li:first-child {
 /* ----------------------- Landing page ------------------------- */
 
 #landing-hero {
-    background-image: url('/img/office.jpg');
+    background-image: url(../img/office.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -569,14 +569,14 @@ section .flex-3columns-space-between {
 }
 
 #motto>ul {
-    padding: 0;
+    padding: 20px 0;
 }
 
 #motto>ul>li {
-    margin: 20px;
     padding: 30px;
     flex: 0 1 250px;
     max-width: 250px;
+    min-height: 250px;
     align-items: stretch;
     border-radius: 50%;
     background: #FFFFFF;
@@ -1135,7 +1135,7 @@ h3+img {
     max-width: 510px;
     max-height: 350px;
     padding: 100px 0 0 20px;
-    background: url(/img/buildingwhite.png) top right no-repeat;
+    background: url(../img/buildingwhite.png) top right no-repeat;
 }
 
 
@@ -1154,13 +1154,13 @@ dl.qaBlock dt {
     margin: 0px 0px 10px 0px;
     padding: 10px 10px 15px 45px;
     border-bottom: 1px dotted #ccc;
-    background: url(/faq/img/ico_q.jpg) left top no-repeat;
+    background: url(../faq/img/ico_q.jpg) left top no-repeat;
 }
 
 dl.qaBlock dd {
     margin: 0px 0px 0px 0px;
     padding: 5px 10px 15px 45px;
-    background: url(/faq/img/ico_a.jpg) left top no-repeat;
+    background: url(../faq/img/ico_a.jpg) left top no-repeat;
 }
 
 
