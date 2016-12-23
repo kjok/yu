@@ -1,0 +1,1031 @@
+//colors
+$color_forest_green_90_approx: rgba(51, 153, 51, 0.9);
+$black_70: rgba(0, 0, 0, 0.7);
+$black_50: rgba(0, 0, 0, 0.5);
+$white_50: rgba(255, 255, 255, 0.5);
+$color_tara_approx: #e2f4e8;
+$color_onahau_approx: rgb(204, 255, 255);
+$black_20: rgba(0, 0, 0, 0.2);
+$color_forest_green_30_approx: rgba(51, 153, 51, 0.3);
+$color_pink_30_approx: rgba(255, 204, 204, .3);
+$color_white_lilac_approx: #f6f7fc;
+$color_onahau_30_approx: rgba(204, 255, 255, 0.3);
+$color_cream_approx: rgb(255, 255, 204);
+
+//fonts
+$font_0: Times New Roman;
+$font_1: 游明朝;
+$font_2: YuMincho;
+$font_3: Hiragino Mincho ProN;
+$font_4: Meiryo;
+$font_5: serif;
+$font_6: Material Icons;
+$font_7: YuGothic;
+$font_8: Yu Gothic;
+$font_9: Aria;
+$font_10: Pinyon Script;
+
+//urls
+$url_0: url(../img/bgpagetitle.png);
+$url_1: url(../faq/img/ico_q.jpg);
+$url_2: url(../faq/img/ico_a.jpg);
+$url_3: url(../common/bg_footer.gif);
+$url_4: url(../img/bg_mainimg.jpg);
+$url_5: url(../img/office.jpg);
+$url_6: url(../consultation/img/flow_arrow.jpg);
+$url_7: url(../shortcare/img/program02.jpg);
+$url_8: url(../shortcare/img/program03.jpg);
+$url_9: url(../shortcare/img/tit_name.jpg);
+$url_10: url(../img/buildingwhite.png);
+
+//@extend-elements
+//original selectors
+//h3, #hero-message, .font-header, h1, h2, h4
+%extend_1 {
+	margin-bottom: 1em;
+	color: $color_forest_green_90_approx;
+	font-family: $font_0, $font_1, $font_2, $font_3, $font_4, $font_5;
+}
+
+//original selectors
+//.main-and-aside, .main, .main-aside
+%extend_2 {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px 10px;
+}
+
+
+h3 {
+	@extend %extend_1;
+	margin: 20px auto;
+	text-align: center;
+	+ img {
+		width: 100%;
+		max-width: 510px;
+		max-height: 350px;
+	}
+}
+#hero-message {
+	@extend %extend_1;
+	position: absolute;
+	bottom: 70px;
+	left: 0;
+	width: 95%;
+	padding: 0 17px;
+	color: $black_50;
+	background-color: transparent;
+	text-align: center;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 1px 1px 3px $white_50, -1px 1px 2px $white_50, 1px -1px 2px $white_50, -1px -1px 2px $white_50;
+	line-height: 1.5;
+	p {
+		max-width: 490px;
+		margin: 0 auto;
+		text-align: left;
+		font-size: 1.8rem;
+		font-weight: 900;
+	}
+}
+.font-header {
+	@extend %extend_1;
+}
+h1 {
+	@extend %extend_1;
+}
+h2 {
+	@extend %extend_1;
+	> small {
+		font-family: $font_10;
+		font-size: 1.2rem;
+	}
+	&.pagetit {
+		display: flex;
+		width: 100%;
+		height: 161px;
+		margin: 0 auto 10px;
+		background: $color_tara_approx $url_0 top right no-repeat;
+		align-content: center;
+		align-items: center;
+		font-size: 1.8rem;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+h4 {
+	@extend %extend_1;
+}
+.main-and-aside {
+	@extend %extend_2;
+	display: flex;
+	flex-direction: column;
+}
+.main {
+	@extend %extend_2;
+}
+.main-aside {
+	@extend %extend_2;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.material-icons {
+	display: inline-block;
+	text-transform: none;
+	font-family: $font_6;
+	font-style: normal;
+	font-weight: normal;
+}
+a {
+	&:link {
+		color: $black_70;
+		text-decoration: none;
+	}
+	&:visited {
+		color: $black_70;
+		text-decoration: none;
+	}
+	&:active {
+		color: $color_forest_green_90_approx;
+		text-decoration: underline;
+	}
+	&:hover {
+		color: $color_forest_green_90_approx;
+		text-decoration: underline;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+body {
+	color: $black_70;
+	font-family: $font_7, $font_8, $font_9;
+}
+.cnt {
+	margin: 20px auto;
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	&.topicPath {
+		width: 100%;
+		max-width: 945px;
+		margin: 0 auto 10px;
+		padding: 0 5px 0 0;
+		text-align: right;
+		li {
+			display: inline;
+			padding: 0 0 0 10px;
+			font-size: 93%;
+			&:first-child {
+				padding: 0;
+				background: none;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	&.anxietyL01 {
+		width: 220px;
+		float: left;
+		margin: 0 0 0 30px;
+		li {
+			margin: 0 0 10px 0;
+		}
+	}
+	&.anxietyL02 {
+		float: left;
+		li {
+			margin: 0 0 10px 0;
+		}
+	}
+}
+#main-header {
+	display: flex;
+	align-items: center;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	h1 {
+		display: flex;
+		margin: 0;
+		padding: 12px;
+		align-items: center;
+		justify-content: center;
+	}
+	p {
+		width: 100%;
+		padding: 4px;
+		color: $black_50;
+		text-align: center;
+		font-size: .8rem;
+		font-weight: 700;
+	}
+}
+.header-em {
+	width: 100%;
+	height: 37px;
+	margin: 0 0 15px 0;
+	padding: 10px 0 0 20px;
+	color: $color_forest_green_90_approx;
+	background: linear-gradient(to bottom, $white_50 0, $color_onahau_approx 74%, $color_onahau_approx 100%);
+}
+.nav-eng {
+	font-family: $font_10;
+	font-size: 1.2rem;
+}
+table {
+	&.schedule {
+		width: 100%;
+		margin: 0 0 10px 0;
+		padding: 0;
+		border: 1px solid $black_20;
+		th {
+			margin: 0 0 10px 0;
+			padding: 10px 5px;
+			border: 1px solid $black_20;
+			background: $black_20;
+			text-align: center;
+		}
+		td {
+			padding: 10px 5px;
+			border: 1px solid $black_20;
+			text-align: center;
+		}
+	}
+	&.profile {
+		width: 100%;
+		margin: 0 0 50px 0;
+		padding: 0;
+		border: 1px solid $black_20;
+		border-collapse: collapse;
+		th {
+			width: 150px;
+			padding: 10px 0;
+			color: $color_forest_green_90_approx;
+			border: 1px solid $black_20;
+			background: $color_onahau_approx;
+			text-align: center;
+			font-size: 108%;
+		}
+		td {
+			padding: 10px;
+			border: 1px solid $black_20;
+			li {
+				margin: 0 0 5px 0;
+				line-height: 1.3;
+			}
+		}
+	}
+	&.outline {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 1px solid $black_20;
+		border-collapse: collapse;
+		th {
+			width: 150px;
+			padding: 10px 0;
+			color: $color_forest_green_90_approx;
+			border: 1px solid $black_20;
+			background: $color_onahau_approx;
+			text-align: center;
+			font-size: 108%;
+		}
+		td {
+			padding: 20px 10px;
+			border: 1px solid $black_20;
+		}
+	}
+}
+dl {
+	&.sideNavi {
+		display: flex;
+		width: 100%;
+		margin: 0;
+		flex-direction: column;
+		dt {
+			padding: 8px 0;
+			color: $white_50;
+			background: $color_forest_green_90_approx;
+			text-align: center;
+			font-size: 1rem;
+			a {
+				color: $white_50;
+			}
+		}
+		dd {
+			margin: 0;
+			padding: 0 15px;
+			ul {
+				padding: 0;
+			}
+			li {
+				padding: 14px 0;
+				border-top: 1px dotted $color_forest_green_90_approx;
+				&:first-child {
+					border-top: none;
+				}
+			}
+		}
+	}
+	&.melancholy {
+		dt {
+			width: 150px;
+			float: left;
+			padding: 15px 5px;
+			color: $color_forest_green_90_approx;
+			text-align: center;
+			font-size: 123.1%;
+		}
+		dd {
+			margin: 0 0 7px 0;
+			padding: 8px 5px 15px 180px;
+			border-bottom: 1px dotted $black_20;
+			&.end {
+				border-bottom: none;
+			}
+		}
+	}
+	&.anxiety {
+		dt {
+			margin: 0 0 10px 0;
+			padding: 5px;
+			color: $color_forest_green_90_approx;
+			font-size: 123.1%;
+		}
+		dd {
+			padding: 0 5px 30px;
+			line-height: 1.6;
+		}
+	}
+	&.trauma {
+		dt {
+			margin: 0 0 10px 0;
+			padding: 5px;
+			color: $color_forest_green_90_approx;
+			font-size: 123.1%;
+		}
+		dd {
+			padding: 0 5px 30px;
+			line-height: 1.6;
+		}
+	}
+	&.qaBlock {
+		margin: 0 0 20px 0;
+		padding: 12px 20px;
+		background: $black_20;
+		dt {
+			margin: 0 0 10px 0;
+			padding: 10px 10px 15px 45px;
+			border-bottom: 1px dotted $black_20;
+			background: $url_1 left top no-repeat;
+		}
+		dd {
+			margin: 0;
+			padding: 5px 10px 15px 45px;
+			background: $url_2 left top no-repeat;
+		}
+	}
+}
+.sideAboutBlock {
+	width: 100%;
+	margin: 0 0 20px 0;
+	padding: 0 15px;
+	border: 6px solid $color_forest_green_30_approx;
+	background: $white_50;
+	> h3 {
+		margin-top: 14px;
+		width: 100%;
+		padding: 6px;
+		color: $white_50;
+		background-color: $color_forest_green_90_approx;
+		text-align: center;
+	}
+	li {
+		margin: 0 0 8px 0;
+		&.tel {
+			margin: 16px auto;
+			text-align: center;
+		}
+	}
+	table {
+		width: 90%;
+		margin: 16px;
+		border: 1px $black_20 collupsed;
+	}
+	p {
+		margin: 16px auto;
+	}
+	tr {
+		border: 1px dotted $black_20;
+	}
+	th {
+		width: 65px;
+		padding: 6px;
+		vertical-align: top;
+	}
+	td {
+		padding: 6px;
+		background: $white_50;
+		vertical-align: top;
+	}
+	.add {
+		padding: 0 5px;
+	}
+}
+#page-top {
+	position: fixed;
+	right: 20px;
+	bottom: 320px;
+	a {
+		display: block;
+		width: 38px;
+		height: 38px;
+		padding-top: 3px;
+		color: $white_50;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		background-color: $color_onahau_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 2px 2px 3px $black_20;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.7rem;
+		&:hover {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 1px 1px 1px $black_20;
+		}
+	}
+}
+.main-footer {
+	width: 100%;
+	background: $color_onahau_approx $url_3 left 30px no-repeat;
+	justify-content: space-around;
+	padding-bottom: 70px;
+	h3 {
+		width: 100%;
+		text-align: center;
+	}
+	.add {
+		padding-left: 34px;
+		font-style: normal;
+	}
+	.footNavi {
+		display: flex;
+		li::before {
+			content: "▶ ";
+		}
+	}
+	.copyright {
+		position: absolute;
+		left: 0;
+		bottom: 30px;
+		width: 100%;
+		text-align: center;
+	}
+}
+.comingsoon {
+	width: 300px;
+	margin: 50px auto;
+	padding: 30px;
+	border: 5px solid $color_onahau_approx;
+	text-align: center;
+	line-height: 1.6;
+}
+#pjaxContent {
+	background: $url_4 center center no-repeat;
+	animation: fadeInLoad 2s;
+}
+@keyframes fadeInLoad {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.main-nav {
+	margin-bottom: 2px;
+	background: $color_pink_30_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 2px $black_20;
+	ul {
+		padding: 0;
+		list-style-type: none;
+	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		display: block;
+		padding: 10px;
+		color: $black_50;
+		text-align: center;
+		text-decoration: none;
+		&:hover {
+			background-color: $white_50;
+		}
+	}
+}
+.flex-with-media-m {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	&.has-header-s {
+		padding-top: 50px;
+	}
+	&.has-header-l {
+		padding-top: 90px;
+	}
+	> h3 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	> header {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	&.no-header-s > h3 {
+		position: inherit;
+	}
+	&.no-header-l > header {
+		position: inherit;
+	}
+}
+@media screen and(min-width: 900px) {
+	.main-and-aside {
+		flex-direction: row;
+		> .main-aside {
+			flex: 0 0 250px;
+		}
+	}
+}
+@media screen and(min-width: 641px) {
+	.flex-with-media-m {
+		flex-direction: row;
+		&.is-reverse {
+			flex-direction: row-reverse;
+		}
+	}
+	.main-and-aside {
+		align-items: flex-start;
+	}
+}
+#landing-hero {
+	background-image: $url_5;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+#general-message {
+	width: 250px;
+	float: right;
+	margin: 12px;
+	padding: 14px;
+	background-color: $white_50;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: -1px -1px 2px $white_50;
+	* {
+		text-decoration: none;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 1px 1px 1px $white_50;
+		font-size: .9rem;
+	}
+}
+#motto {
+	background: linear-gradient($white_50, $color_onahau_approx);
+	h4 {
+		margin: 20px auto;
+		text-align: center;
+		font-size: 2rem;
+		> small {
+			display: block;
+			margin-bottom: 20px;
+			font-size: 1rem;
+			font-family: $font_10;
+		}
+	}
+	> ul {
+		padding: 20px 0;
+		> li {
+			padding: 30px;
+			flex: 0 1 250px;
+			max-width: 250px;
+			min-height: 250px;
+			align-items: stretch;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+			background: $white_50;
+			text-align: center;
+		}
+	}
+}
+#about-illness {
+	padding-top: 10px;
+	width: 100%;
+	background-color: $color_onahau_approx;
+	min-height: 330px;
+	p {
+		text-align: center;
+	}
+	ul {
+		padding: 0;
+	}
+	> ul > li {
+		flex: 0 1 250px;
+		height: 200px;
+	}
+}
+#schedules-calendar {
+	margin: 0;
+	flex: 0 1 48%;
+	min-width: 48%;
+	align-self: stretch;
+	> h4 {
+		display: flex;
+		min-width: 100%;
+		justify-content: space-between;
+		> a {
+			display: flex;
+			width: 160px;
+			margin-left: auto;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 10px;
+			background-color: $color_onahau_approx;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 2px 2px 3px $black_20;
+			text-decoration: none !important;
+			align-items: center;
+			font-size: .8rem;
+			justify-content: center;
+		}
+	}
+}
+#schedules-consultation {
+	margin: 0;
+	flex: 0 1 48%;
+	min-width: 48%;
+	align-self: stretch;
+	> h4 {
+		display: flex;
+		min-width: 100%;
+		justify-content: space-between;
+		> a {
+			display: flex;
+			width: 160px;
+			margin-left: auto;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 10px;
+			background-color: $color_onahau_approx;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 2px 2px 3px $black_20;
+			text-decoration: none !important;
+			align-items: center;
+			font-size: .8rem;
+			justify-content: center;
+		}
+	}
+	table {
+		width: 100%;
+		margin: 0 0 5px 0;
+		border: 1px dotted $black_20;
+	}
+	th {
+		width: 100px;
+		padding: 10px;
+		border-top: 1px dotted $black_20;
+		background: $color_onahau_approx;
+		text-align: right;
+	}
+	td {
+		padding: 10px;
+		border-top: 1px dotted $black_20;
+	}
+	p {
+		margin: 17px auto;
+	}
+	.txt {
+		text-align: center;
+	}
+}
+.moreLink {
+	margin-top: 10px;
+	a {
+		width: 160px;
+		background-color: $color_onahau_approx;
+		font-size: .7rem;
+	}
+}
+.seealso {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 2px 2px 3px $black_20;
+	text-align: center;
+	text-decoration: none !important;
+	&:hover {
+		opacity: 0.8;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 1px $black_20;
+	}
+}
+#careFlow {
+	> dl {
+		justify-content: flex-start;
+		> dt {
+			flex: 0 0 auto;
+			min-width: 150px;
+			max-width: 150px;
+			min-height: 36px;
+			padding-top: 10px;
+			color: $color_forest_green_90_approx;
+			background: $black_20 $url_6 center bottom no-repeat;
+			text-align: center;
+			font-size: 1rem;
+			font-weight: 700;
+			align-self: stretch;
+		}
+	}
+	p {
+		margin: 10px auto;
+	}
+}
+.flex-content {
+	display: flex;
+	margin-bottom: 20px;
+}
+.catch {
+	margin: 0 0 15px 0;
+	padding: 20px;
+	color: $color_forest_green_90_approx;
+	font-size: 1rem;
+	font-weight: 600;
+}
+.director-greeting {
+	> header {
+		justify-content: space-between;
+		align-items: center;
+		> h3 {
+			width: 100%;
+		}
+		> figure {
+			flex: 0 0 250px;
+			> figcaption {
+				width: 100%;
+				padding-top: 10px;
+				white-space: nowrap;
+				text-align: center;
+			}
+		}
+		> p {
+			flex: 1 0 45%;
+		}
+	}
+	> p {
+		margin-bottom: 1rem;
+	}
+}
+.messageBox {
+	width: 95%;
+	margin: 50px auto;
+	padding: 15px;
+	border: 5px solid $color_onahau_approx;
+	.txt {
+		text-align: left;
+		font-size: 108%;
+		line-height: 1.6;
+	}
+	.signature {
+		margin: 0;
+		padding: 0 20px 0 0;
+		text-align: right;
+	}
+}
+.introductionBlock {
+	margin: 0 0 20px 0;
+	line-height: 1.6;
+	.catch {
+		margin: 0 0 5px 0;
+		color: $color_forest_green_90_approx;
+		font-size: 161.6%;
+		line-height: 1.4;
+	}
+	.flex-with-media-match {
+		flex: 1 0 340px;
+	}
+}
+.indexBoxes {
+	margin: 10px auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: $color_white_lilac_approx;
+	img {
+		flex: 1 0 50%;
+		width: 150px;
+	}
+	ul {
+		flex: 1 0 50%;
+	}
+}
+.traumaList {
+	margin: 0 0 15px 0;
+	padding: 10px 10px 10px 30px;
+	overflow: hidden;
+	border: 1px dotted $black_20;
+	ul {
+		float: left;
+		padding: 0 50px 0 0;
+	}
+	li {
+		margin: 0 0 5px 0;
+	}
+}
+.photoR {
+	float: right;
+	padding: 0 0 15px 15px;
+}
+.treatment {
+	margin: 0 0 0 -20px;
+	li {
+		width: 305px;
+		float: left;
+		margin: 0 0 15px 20px;
+		padding: 10px 15px;
+		background: $black_20;
+		background-color: $color_onahau_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 2px 2px 3px $black_20;
+		h5 {
+			margin: 0 0 5px 0;
+			padding-left: 1em;
+			color: $color_forest_green_90_approx;
+			text-indent: -1em;
+			font-size: 123.1%;
+		}
+	}
+}
+.programBlock {
+	> div {
+		flex: 0 1 188px;
+		min-height: 400px;
+		max-width: 188px;
+		display: flex;
+		flex-direction: column;
+	}
+	img {
+		flex: 0 0 188px;
+		margin-top: 0;
+		max-width: 188px;
+	}
+	dt {
+		&.program2 {
+			background: $url_7 center top no-repeat;
+		}
+		&.program3 {
+			background: $url_8 center top no-repeat;
+		}
+	}
+	dd {
+		line-height: 1.6;
+	}
+}
+.profile {
+	margin: 0 0 40px 0;
+	overflow: hidden;
+	.profSide {
+		width: 400px;
+		float: right;
+		h4 {
+			margin: 0 0 10px 0;
+			padding: 0 0 5px 10px;
+			border-bottom: 1px dotted $black_20;
+			background: $url_9 left top no-repeat;
+			font-size: 153.9%;
+		}
+		dt {
+			margin: 0 0 5px 0;
+			color: $color_forest_green_90_approx;
+			font-size: 123.1%;
+		}
+		dd {
+			margin: 0 0 20px 0;
+			li {
+				margin: 0 0 5px 0;
+			}
+		}
+	}
+	.photo {
+		float: left;
+	}
+}
+.scheLink {
+	margin: 0 0 50px 0;
+	text-decoration: underline;
+}
+#page-access {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.googlemap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	a {
+		margin-left: 20px;
+		color: $color_forest_green_90_approx;
+		font-size: 1.4rem;
+		font-weight: 900;
+		&:hover {
+			color: $color_forest_green_90_approx;
+		}
+	}
+}
+.addBlock0 {
+	width: 100%;
+	max-width: 510px;
+	max-height: 350px;
+	padding: 100px 0 0 20px;
+	background: $url_10 top right no-repeat;
+}
+input:focus {
+	outline: none;
+}
+textarea:focus {
+	outline: none;
+}
+.see-also > a {
+	display: flex;
+	width: 100%;
+	height: 32px;
+	background-color: $color_onahau_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 2px 2px 3px $black_20;
+	text-decoration: none;
+	align-items: center;
+	font-size: .7rem;
+	font-weight: bold;
+	justify-content: center;
+	&:hover {
+		background-color: $color_onahau_30_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 1px $black_20;
+	}
+}
+.main-links > a {
+	width: 220px;
+	margin: 20px auto;
+	padding: 10px;
+	color: $black_70;
+	border: 1px solid $black_20;
+	background-color: $color_cream_approx;
+	font-weight: 700;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 250ms ease-out;
+}
+section .flex-3columns-space-between {
+	margin: 1rem auto;
+}
+#three-features > section {
+	margin: 20px;
+	padding-bottom: 30px;
+	flex: 1 1 280px;
+	max-width: 280px;
+	max-height: 410px;
+	min-height: 340px;
+	background-color: $color_forest_green_30_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	> p {
+		padding: 0 1rem;
+	}
+	> h4 {
+		padding: 0 1rem;
+		align-self: center;
+	}
+	> figure {
+		margin: 0;
+		align-self: stretch;
+		min-height: 200px;
+		order: -1;
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 10px;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 10px;
+		background-size: cover;
+		background-position: center;
+	}
+}
